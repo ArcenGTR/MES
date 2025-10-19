@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610968b4-0817-4522-bb75-5c5d4d8df44d" name="Changes" comment="Data Parser" />
+    <list default="true" id="610968b4-0817-4522-bb75-5c5d4d8df44d" name="Changes" comment="Data Parser">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/AbstractGauss2DStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/AbstractGaussStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss1PointStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss2Point2DStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss2PointStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss3Point2DStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss3PointStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss4Point2DStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss4PointStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/GaussData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/NumericalIntegration2DStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/NumericalIntegrationStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -20,14 +39,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ArcenGTR&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ArcenGTR/MES.git&quot;,
+    &quot;accountId&quot;: &quot;7ff9070b-e99b-41ab-abdc-1538ee70125c&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="33qRdeI4n9DwV8TVDhnj0bczdJN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,11 +72,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Maven.MESProject [clean].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Code/Java/MES/MESProject",
+    "last_opened_file_path": "/home/arcengtr/Code/PAOiM/PAOiM1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -49,6 +89,7 @@
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "D:/Code/Java/MES/MESProject/src/main/java/com/arcengtr/Main.java",
     "settings.editor.selected.configurable": "actions.on.save",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -60,8 +101,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
       </set>
     </attachedChunks>
   </component>
@@ -74,6 +115,17 @@
       <option name="presentableId" value="Default" />
       <updated>1760042706436</updated>
       <workItem from="1760042707489" duration="3432000" />
+      <workItem from="1760301621018" duration="1641000" />
+      <workItem from="1760303739653" duration="368000" />
+      <workItem from="1760354520497" duration="2626000" />
+      <workItem from="1760451991162" duration="11000" />
+      <workItem from="1760455367353" duration="31000" />
+      <workItem from="1760456945364" duration="6000" />
+      <workItem from="1760459938191" duration="149000" />
+      <workItem from="1760519161622" duration="5000" />
+      <workItem from="1760524010359" duration="488000" />
+      <workItem from="1760687599220" duration="48000" />
+      <workItem from="1760900149892" duration="5122000" />
     </task>
     <task id="LOCAL-00001" summary="Data Parser">
       <option name="closed" value="true" />
@@ -138,5 +190,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Data Parser" />
     <option name="LAST_COMMIT_MESSAGE" value="Data Parser" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
