@@ -1,5 +1,8 @@
 package com.arcengtr.solvers.gaussLegendreQuadratureSolver;
 
+import com.arcengtr.common.Element;
+import com.arcengtr.common.Jacobian;
+
 import java.util.List;
 import java.util.function.Function;
 

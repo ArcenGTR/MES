@@ -1,25 +1,27 @@
 package com.arcengtr;
 
-import com.arcengtr.solvers.gaussLegendreQuadratureSolver.*;
+import com.arcengtr.common.*;
+import com.arcengtr.parsers.GlobalDataParser;
+import com.arcengtr.services.JacobianService;
 
+import java.nio.file.Path;
 import java.util.List;
-import java.util.function.Function;
-
-import static java.lang.Math.pow;
 
 public class Main {
+
     public static void main(String[] args) {
 
         // Global Data parser demo
-        /*
+
         try {
 
-            Path file = Path.of("src/main/resources/globalData/Test3_31_31_kwadrat.txt");
+            Path file = Path.of("src/main/resources/globalData/Test2_4_4_MixGrid.txt");
 
             GlobalDataParser parser = new GlobalDataParser();
             GlobalDataParser.ParsedData parsedData = parser.parse(file);
 
             GlobalData globalData = parsedData.getGlobalData();
+            globalData.setNpc(2);
             Grid grid = parsedData.getGrid();
 
             System.out.println("=== Global Data ===");
@@ -28,15 +30,33 @@ public class Main {
             System.out.println("\n=== Nodes ===");
             grid.getNodes().forEach(System.out::println);
 
-            System.out.println("\n=== Elements ===");
-            grid.getElements().forEach(System.out::println);
+            ElemUniv univ = new ElemUniv(globalData.getNpc());
+
+            Node[] allNodes = grid.getNodes().toArray(new Node[0]);
+            List<Element> elements = grid.getElements();
+
+            for (Element element : elements) {
+                int npc2 = univ.npc * univ.npc;
+                Jacobian[] jacobians = new Jacobian[npc2];
+
+                for (int gp = 0; gp < npc2; gp++) {
+                    jacobians[gp] = JacobianService.computeJacobian(element, allNodes, univ, gp);
+                }
+
+                element.setJacobians(jacobians);
+
+                System.out.println("\n=== Element " + element);
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-         */
+
+
 
         // Numerical Integral Solver
+
+        /*
 
         Function<List<Double>, Double> demoFun = (arguments) -> {
             Double x = arguments.getFirst();
@@ -66,5 +86,6 @@ public class Main {
 
         System.out.println("3 Points: " + result3_2d);
         System.out.println("4 Points: " + result4_2d);
+         */
     }
 }

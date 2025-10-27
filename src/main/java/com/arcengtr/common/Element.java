@@ -9,5 +9,6 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode
 public class Element {
-    private int[] ID;
+    private int[] nodeId;
+    private Jacobian[] jacobians;
 }

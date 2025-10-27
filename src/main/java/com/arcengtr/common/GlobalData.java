@@ -19,4 +19,5 @@ public class GlobalData {
     private double specificHeat;
     private int nN; // liczba węzłów
     private int nE; // liczba elementów
+    private int npc; // punkty Gaussa
 }

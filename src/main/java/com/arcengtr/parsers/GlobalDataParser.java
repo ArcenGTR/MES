@@ -81,7 +81,7 @@ public class GlobalDataParser {
                                 Integer.parseInt(parts[3].trim()),
                                 Integer.parseInt(parts[4].trim())
                         };
-                        elements.add(Element.builder().ID(ids).build());
+                        elements.add(Element.builder().nodeId(ids).build());
                     }
                 }
             }

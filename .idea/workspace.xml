@@ -4,24 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610968b4-0817-4522-bb75-5c5d4d8df44d" name="Changes" comment="Data Parser">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/AbstractGauss2DStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/AbstractGaussStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss1PointStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss2Point2DStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss2PointStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss3Point2DStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss3PointStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss4Point2DStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/Gauss4PointStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/GaussData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/NumericalIntegration2DStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussPrimitiveSolver/NumericalIntegrationStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="610968b4-0817-4522-bb75-5c5d4d8df44d" name="Changes" comment="Jacobian">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/ElemUniv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Jacobian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/JacobianService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/parsers/GlobalDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/parsers/GlobalDataParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussLegendreQuadratureSolver/AbstractGauss2DStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussLegendreQuadratureSolver/AbstractGauss2DStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussLegendreQuadratureSolver/NumericalIntegration2DStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/gaussLegendreQuadratureSolver/NumericalIntegration2DStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element$ElementBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element$ElementBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData$GlobalDataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData$GlobalDataBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/parsers/GlobalDataParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/parsers/GlobalDataParser.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,44 +55,41 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="33qRdeI4n9DwV8TVDhnj0bczdJN" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Maven.MESProject [clean].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/arcengtr/Code/PAOiM/PAOiM1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/Code/Java/MES/MESProject/src/main/java/com/arcengtr/Main.java",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MESProject [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/arcengtr/Code/PAOiM/PAOiM1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Code/Java/MES/MESProject/src/main/java/com/arcengtr/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\Java\MES\MESProject\src\main\resources\globalData" />
@@ -101,8 +98,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -126,6 +123,7 @@
       <workItem from="1760524010359" duration="488000" />
       <workItem from="1760687599220" duration="48000" />
       <workItem from="1760900149892" duration="5122000" />
+      <workItem from="1761562289048" duration="1407000" />
     </task>
     <task id="LOCAL-00001" summary="Data Parser">
       <option name="closed" value="true" />
@@ -189,7 +187,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Data Parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data Parser" />
+    <MESSAGE value="Jacobian" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jacobian" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
