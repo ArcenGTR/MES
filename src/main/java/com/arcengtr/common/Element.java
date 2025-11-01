@@ -2,6 +2,8 @@ package com.arcengtr.common;
 
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -10,5 +12,5 @@ import lombok.*;
 @EqualsAndHashCode
 public class Element {
     private int[] nodeId;
-    private Jacobian[] jacobians;
+    private List<Jacobian> jacobians;
 }

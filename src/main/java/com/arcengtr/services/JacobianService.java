@@ -21,7 +21,6 @@ public class JacobianService {
         }
 
         Jacobian J = new Jacobian();
-        J.compute(x, y, univ.dN_dXi[gaussPointIndex], univ.dN_dEta[gaussPointIndex]);
         return J;
     }
 }
