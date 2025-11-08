@@ -71,7 +71,7 @@ public class Main {
     public static void main(String[] args) {
         try {
 
-            Path file = Path.of("src/main/resources/globalData/Test1.txt");
+            Path file = Path.of("src/main/resources/globalData/Test2_4_4_MixGrid.txt");
 
             GlobalDataParser parser = new GlobalDataParser();
             GlobalDataParser.ParsedData parsedData = parser.parse(file);
@@ -121,9 +121,14 @@ public class Main {
                 }
             }
 
-            System.out.println();
-            printMatrix(dNdXiPointTable, "dXiPointTable");
-            printMatrix(dNdEtaPointTable, "dEtaPointTable");
+            //System.out.println();
+            //printMatrix(dNdXiPointTable, "dXiPointTable");
+            //printMatrix(dNdEtaPointTable, "dEtaPointTable");
+
+            int nN = globalData.getNN();
+            GlobalMatrix globalMatrix = GlobalMatrix.builder()
+                    .H_global(new double[nN][nN])
+                    .build();
 
             for (Element element : elements) {
                 int[] nodeIds = element.getNodeId();
@@ -212,8 +217,7 @@ public class Main {
                     double[][] Hp = multiplyMatrixByScalar(sumTerms, scalar);
 
                     H_element = addMatrices(H_element, Hp);
-
-                    System.out.println();
+                    /*
                     if (element == elements.getFirst()) {
                         System.out.println("--- Punkt Całkowania " + (p + 1) + " ---");
                         System.out.println("dNdX: " + Arrays.toString(dNdX));
@@ -221,15 +225,19 @@ public class Main {
                         System.out.println("k*|J|*Wp: " + String.format(Locale.US, "%.4f", scalar));
                         printMatrix(Hp, null);
                     }
+                     */
                 }
 
                 element.setJacobians(elementJacobians);
 
-                if (element == elements.getFirst()) {
-                    System.out.println("\n--- Macierz dla pierwszego elementu ---");
-                    printMatrix(H_element, null);
-                }
+                globalMatrix.addElementMatrix(H_element, element.getNodeId());
+
+                System.out.println("\n--- Macierz H dla elementu ID=" + element.getNodeId() + " ---");
+                printMatrix(H_element, null);
             }
+
+            System.out.println("\n=== Macierz Globalna H ===");
+            printMatrix(globalMatrix.getH_global(), null);
 
 
         } catch (Exception e) {
