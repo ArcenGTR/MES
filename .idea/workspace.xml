@@ -4,11 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610968b4-0817-4522-bb75-5c5d4d8df44d" name="Changes" comment="H matrix for element">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalMatrix.java" afterDir="false" />
+    <list default="true" id="610968b4-0817-4522-bb75-5c5d4d8df44d" name="Changes" comment="Matrix Aggregation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/BoundaryConditionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ConductivityMatrixService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ElementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/MatrixService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/GaussEliminationLinearSolver/LinearSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/ElemUniv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/ElemUniv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/parsers/GlobalDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/parsers/GlobalDataParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/JacobianService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/JacobianService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element$ElementBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element$ElementBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData$GlobalDataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData$GlobalDataBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Node$NodeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Node$NodeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/parsers/GlobalDataParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/parsers/GlobalDataParser.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +54,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/ArcenGTR/MES.git&quot;,
-    &quot;accountId&quot;: &quot;7ff9070b-e99b-41ab-abdc-1538ee70125c&quot;
+    &quot;accountId&quot;: &quot;b20d2258-182d-4b69-9fb4-abe2869fe5e8&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -46,7 +65,7 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="33qRdeI4n9DwV8TVDhnj0bczdJN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -63,7 +82,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code/Java/MES/MESProject/src/main/resources/globalData&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/Java/PAOiM3&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -88,8 +107,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>
@@ -119,7 +138,11 @@
       <workItem from="1762000522276" duration="11687000" />
       <workItem from="1762252452404" duration="8000" />
       <workItem from="1762619874857" duration="679000" />
-      <workItem from="1762630237816" duration="2189000" />
+      <workItem from="1762630237816" duration="2386000" />
+      <workItem from="1762709560926" duration="46000" />
+      <workItem from="1762714068817" duration="737000" />
+      <workItem from="1764172242049" duration="13610000" />
+      <workItem from="1764238314210" duration="8984000" />
     </task>
     <task id="LOCAL-00001" summary="Data Parser">
       <option name="closed" value="true" />
@@ -153,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762018249998</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Matrix Aggregation">
+      <option name="closed" value="true" />
+      <created>1762632633978</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762632633978</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +232,8 @@
     <MESSAGE value="Data Parser" />
     <MESSAGE value="Jacobian" />
     <MESSAGE value="H matrix for element" />
-    <option name="LAST_COMMIT_MESSAGE" value="H matrix for element" />
+    <MESSAGE value="Matrix Aggregation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrix Aggregation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

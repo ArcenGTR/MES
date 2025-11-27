@@ -13,4 +13,11 @@ import java.util.List;
 public class Element {
     private int[] nodeId;
     private List<Jacobian> jacobians;
+    private double[][] H;
+    private double[][] Hbc;
+    private double[] P;
+
+    public int getNumNodes() {
+        return nodeId.length;
+    }
 }

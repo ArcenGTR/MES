@@ -11,4 +11,5 @@ import lombok.*;
 public class Node {
     private double x;
     private double y;
+    private boolean boundary;
 }

@@ -2,6 +2,8 @@ package com.arcengtr.common;
 
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -20,4 +22,5 @@ public class GlobalData {
     private int nN; // liczba węzłów
     private int nE; // liczba elementów
     private int npc; // punkty Gaussa
+    private List<Integer> bcNodes; // punkty graniczne
 }

@@ -35,6 +35,7 @@ public class GlobalDataParser {
         GlobalData.GlobalDataBuilder globalDataBuilder = GlobalData.builder();
         List<Node> nodes = new ArrayList<>();
         List<Element> elements = new ArrayList<>();
+        List<Integer> bcNodes = new ArrayList<>();
 
         int nN = 0;
         int nE = 0;
@@ -65,7 +66,11 @@ public class GlobalDataParser {
                     if (parts.length >= 3) {
                         double x = Double.parseDouble(parts[1].trim());
                         double y = Double.parseDouble(parts[2].trim());
-                        nodes.add(Node.builder().x(x).y(y).build());
+                        nodes.add(Node.builder()
+                                .x(x)
+                                .y(y)
+                                .boundary(false)
+                                .build());
                     }
                 }
             }
@@ -85,9 +90,25 @@ public class GlobalDataParser {
                     }
                 }
             }
+            else if (line.startsWith("*BC")) {
+                i++;
+                String bcLine = lines.get(i);
+                String[] bcParts = bcLine.split(",");
+                for (String part : bcParts) {
+                    int nodeId = Integer.parseInt(part.trim());
+                    bcNodes.add(nodeId);
+
+                    if (nodeId >= 1 && nodeId <= nodes.size()) {
+                        Node node = nodes.get(nodeId - 1);
+                        node.setBoundary(true);
+                    }
+                }
+            }
         }
 
-        GlobalData globalData = globalDataBuilder.build();
+        GlobalData globalData = globalDataBuilder
+                .bcNodes(bcNodes)
+                .build();
         Grid grid = Grid.builder()
                 .nN(nN)
                 .nE(nE)
