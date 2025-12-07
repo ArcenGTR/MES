@@ -70,4 +70,38 @@ public class MatrixService {
         }
         return result;
     }
+
+    public static double[] addVectors(double[] v1, double[] v2) {
+        if (v1.length != v2.length) {
+            throw new IllegalArgumentException("Vectors must have the same length for addition.");
+        }
+        int n = v1.length;
+        double[] result = new double[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = v1[i] + v2[i];
+        }
+        return result;
+    }
+
+    public static double[] multiplyMatrixByVector(double[][] matrix, double[] vector) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+
+        if (cols != vector.length) {
+            throw new IllegalArgumentException("Matrix columns must equal vector length for multiplication.");
+        }
+
+        double[] result = new double[rows];
+
+        // Результат (result) будет иметь размерность матрицы по строкам
+        for (int i = 0; i < rows; i++) {
+            double sum = 0;
+            // Перемножаем строку матрицы на вектор
+            for (int j = 0; j < cols; j++) {
+                sum += matrix[i][j] * vector[j];
+            }
+            result[i] = sum;
+        }
+        return result;
+    }
 }

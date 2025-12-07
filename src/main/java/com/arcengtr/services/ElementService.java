@@ -11,6 +11,7 @@ public class ElementService {
 
     private final ConductivityMatrixService conductivityService;
     private final BoundaryConditionService boundaryService;
+    private final CapacityMatrixService capacityService;
 
     public void processElement(Element element, Node[] allNodes, GlobalData globalData,
                                List<Double> gaussPoints, List<Double> gaussWeights) {
@@ -57,10 +58,12 @@ public class ElementService {
 
         double[][] Hbc_element = boundaryService.calculateHbc(nodeIds, allNodes, globalData.getAlfa(), gaussPoints, gaussWeights);
         double[] P_element = boundaryService.calculatePVector(nodeIds, allNodes, globalData.getAlfa(), globalData.getTot(), gaussPoints, gaussWeights);
+        double[][] C_element = capacityService.calculateC(jacobians, nodeX, globalData.getDensity(), globalData.getSpecificHeat(), gaussPoints, gaussWeights);
 
         element.setH(H_element);
         element.setJacobians(jacobians);
         element.setHbc(Hbc_element);
         element.setP(P_element);
+        element.setC(C_element);
     }
 }
