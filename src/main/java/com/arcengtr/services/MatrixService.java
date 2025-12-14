@@ -35,7 +35,7 @@ public class MatrixService {
         System.out.println(" ]");
     }
 
-    public double[][] multiplyVectorColumnByRow(double[] v1, double[] v2) {
+    public double[][] multiplyVectorByTransposed(double[] v1, double[] v2) {
         int n = v1.length;
         int m = v2.length;
         double[][] result = new double[n][m];
@@ -71,7 +71,7 @@ public class MatrixService {
         return result;
     }
 
-    public static double[] addVectors(double[] v1, double[] v2) {
+    public double[] addVectors(double[] v1, double[] v2) {
         if (v1.length != v2.length) {
             throw new IllegalArgumentException("Vectors must have the same length for addition.");
         }
@@ -83,7 +83,7 @@ public class MatrixService {
         return result;
     }
 
-    public static double[] multiplyMatrixByVector(double[][] matrix, double[] vector) {
+    public double[] multiplyMatrixByVector(double[][] matrix, double[] vector) {
         int rows = matrix.length;
         int cols = matrix[0].length;
 
@@ -93,14 +93,25 @@ public class MatrixService {
 
         double[] result = new double[rows];
 
-        // Результат (result) будет иметь размерность матрицы по строкам
         for (int i = 0; i < rows; i++) {
             double sum = 0;
-            // Перемножаем строку матрицы на вектор
             for (int j = 0; j < cols; j++) {
                 sum += matrix[i][j] * vector[j];
             }
             result[i] = sum;
+        }
+        return result;
+    }
+
+    public  double[] multiplyVectorByScalar(double[] vector, double scalar) {
+        if (vector == null) {
+            throw new IllegalArgumentException("Vector is null.");
+        }
+
+        int n = vector.length;
+        double[] result = new double[n];
+        for (int i = 0; i < n; i++) {
+            result[i] = vector[i] * scalar;
         }
         return result;
     }

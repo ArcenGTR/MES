@@ -19,6 +19,7 @@ public class ElementService {
         int[] nodeIds = element.getNodeId();
         int numNodes = nodeIds.length;
 
+        // współrzędne globalne
         double[] nodeX = new double[numNodes];
         double[] nodeY = new double[numNodes];
         for (int i = 0; i < numNodes; i++) {
@@ -49,8 +50,7 @@ public class ElementService {
                 Jacobian jac = JacobianService.calculateJacobian(nodeX, nodeY, dNdXi, dNdEta);
                 jacobians.add(jac);
 
-                double weight2D = weightEta * weightXi;
-                double[][] Hp = conductivityService.calculateLocalHPoint(jac, dNdXi, dNdEta, globalData.getConductivity(), weight2D);
+                double[][] Hp = conductivityService.calculateLocalHPoint(jac, dNdXi, dNdEta, globalData.getConductivity(), weightEta * weightXi);
 
                 H_element = MatrixService.addMatrices(H_element, Hp);
             }

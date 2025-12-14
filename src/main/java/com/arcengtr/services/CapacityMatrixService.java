@@ -23,12 +23,12 @@ public class CapacityMatrixService {
                 Jacobian jacobianData = jacobians.get(p);
                 double detJ = jacobianData.getDetJ();
 
-                double[] N_vector = new double[numNodes];
+                double[] N = new double[numNodes];
                 for (int k = 0; k < numNodes; k++) {
-                    N_vector[k] = ElemUniv.formN(k, xi, eta);
+                    N[k] = ElemUniv.formN(k, xi, eta);
                 }
 
-                double[][] NNT = MatrixService.multiplyVectorColumnByRow(N_vector, N_vector);
+                double[][] multN = MatrixService.multiplyVectorByTransposed(N, N);
 
                 int index1D_eta = p / numPoints1D;
                 int index1D_xi = p % numPoints1D;
@@ -36,7 +36,7 @@ public class CapacityMatrixService {
 
                 double scalar = density * specificHeat * detJ * Wp;
 
-                double[][] Cp = MatrixService.multiplyMatrixByScalar(NNT, scalar);
+                double[][] Cp = MatrixService.multiplyMatrixByScalar(multN, scalar);
                 C_element = MatrixService.addMatrices(C_element, Cp);
 
                 p++;

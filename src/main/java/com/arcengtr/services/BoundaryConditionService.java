@@ -34,10 +34,10 @@ public class BoundaryConditionService {
                         N[k] = ElemUniv.formN(k, xi, eta);
                     }
 
-                    double[][] NNT = MatrixService.multiplyVectorColumnByRow(N, N);
+                    double[][] multN = MatrixService.multiplyVectorByTransposed(N, N);
 
                     double scalar = alfa * weight * detJ_surf;
-                    double[][] Hbc_edge = MatrixService.multiplyMatrixByScalar(NNT, scalar);
+                    double[][] Hbc_edge = MatrixService.multiplyMatrixByScalar(multN, scalar);
 
                     Hbc = MatrixService.addMatrices(Hbc, Hbc_edge);
                 }
@@ -74,9 +74,7 @@ public class BoundaryConditionService {
 
                     double scalar = alfa * tot * weight * detJ_surf;
 
-                    for (int n = 0; n < numNodes; n++) {
-                        P[n] += scalar * N[n];
-                    }
+                    P = MatrixService.addVectors(P, MatrixService.multiplyVectorByScalar(N, scalar));
                 }
             }
         }

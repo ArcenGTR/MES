@@ -4,30 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610968b4-0817-4522-bb75-5c5d4d8df44d" name="Changes" comment="Matrix Aggregation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/BoundaryConditionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ConductivityMatrixService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ElementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/MatrixService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/solvers/GaussEliminationLinearSolver/LinearSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="610968b4-0817-4522-bb75-5c5d4d8df44d" name="Changes" comment="Conductivity and simulation in time(50/50)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/ElemUniv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/ElemUniv.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/parsers/GlobalDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/parsers/GlobalDataParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/BoundaryConditionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/BoundaryConditionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/CapacityMatrixService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/CapacityMatrixService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ConductivityMatrixService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ConductivityMatrixService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ElementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ElementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/JacobianService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/JacobianService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/MatrixService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/MatrixService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element$ElementBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element$ElementBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData$GlobalDataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData$GlobalDataBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Node$NodeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Node$NodeBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/parsers/GlobalDataParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/parsers/GlobalDataParser.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,30 +58,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.MESProject [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code/Java/PAOiM3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Code/Java/MES/MESProject/src/main/java/com/arcengtr/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Maven.MESProject [clean].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Code/Java/PAOiM3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/Code/Java/MES/MESProject/src/main/java/com/arcengtr/Main.java",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code\Java\MES\MESProject\src\main\resources\globalData" />
@@ -103,6 +90,15 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\Java\MES\MESProject\src\main\resources\globalData" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arcengtr.Main" />
+      <module name="MESProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -142,7 +138,12 @@
       <workItem from="1762709560926" duration="46000" />
       <workItem from="1762714068817" duration="737000" />
       <workItem from="1764172242049" duration="13610000" />
-      <workItem from="1764238314210" duration="8984000" />
+      <workItem from="1764238314210" duration="9035000" />
+      <workItem from="1764343630030" duration="29000" />
+      <workItem from="1765130374119" duration="5385000" />
+      <workItem from="1765222428033" duration="10000" />
+      <workItem from="1765718503721" duration="596000" />
+      <workItem from="1765724161740" duration="9602000" />
     </task>
     <task id="LOCAL-00001" summary="Data Parser">
       <option name="closed" value="true" />
@@ -184,7 +185,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762632633978</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Hbc, P, Linear Solver">
+      <option name="closed" value="true" />
+      <created>1764249009698</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764249009698</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Conductivity and simulation in time(50/50)">
+      <option name="closed" value="true" />
+      <created>1765135820895</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765135820896</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +250,9 @@
     <MESSAGE value="Jacobian" />
     <MESSAGE value="H matrix for element" />
     <MESSAGE value="Matrix Aggregation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Matrix Aggregation" />
+    <MESSAGE value="Hbc, P, Linear Solver" />
+    <MESSAGE value="Conductivity and simulation in time(50/50)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Conductivity and simulation in time(50/50)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

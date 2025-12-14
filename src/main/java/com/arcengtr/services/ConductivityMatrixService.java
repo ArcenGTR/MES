@@ -19,11 +19,11 @@ public class ConductivityMatrixService {
             dNdY[i] = Jinv[1][0] * dNdXi[i] + Jinv[1][1] * dNdEta[i];
         }
 
-        double[][] termX = MatrixService.multiplyVectorColumnByRow(dNdX, dNdX);
-        double[][] termY = MatrixService.multiplyVectorColumnByRow(dNdY, dNdY);
-        double[][] sumTerms = MatrixService.addMatrices(termX, termY);
+        double[][] xPart = MatrixService.multiplyVectorByTransposed(dNdX, dNdX);
+        double[][] yPart = MatrixService.multiplyVectorByTransposed(dNdY, dNdY);
+        double[][] sum = MatrixService.addMatrices(xPart, yPart);
 
         double scalar = conductivity * detJ * weight;
-        return MatrixService.multiplyMatrixByScalar(sumTerms, scalar);
+        return MatrixService.multiplyMatrixByScalar(sum, scalar);
     }
 }

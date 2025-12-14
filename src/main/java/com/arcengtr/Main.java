@@ -34,11 +34,14 @@ public class Main {
             System.out.println("=== Global Data ===");
             System.out.println(globalData);
 
+            // Liczba węzłów
             int nN = globalData.getNN();
 
+            // wypełnienie temperatur początkowych
             double[] T0 = new double[nN];
             Arrays.fill(T0, globalData.getInitialTemp());
 
+            // inicjalizacja tablic globalnych
             GlobalMatrix globalMatrix = GlobalMatrix.builder()
                     .H_global(new double[nN][nN])
                     .Hbc_global(new double[nN][nN])
@@ -46,8 +49,8 @@ public class Main {
                     .C_global(new double[nN][nN])
                     .build();
 
-            List<Double> points = GaussData.POINTS_2;
-            List<Double> weights = GaussData.WEIGHTS_2;
+            List<Double> points = GaussData.POINTS_3;
+            List<Double> weights = GaussData.WEIGHTS_3;
 
             for (Element element : grid.getElements()) {
 
@@ -125,7 +128,7 @@ public class Main {
                 if (currentTime >= T_sim) {
                     System.out.println("Ostateczna temperaturaр:");
                     MatrixService.printVector(T_current);
-                } else if (step % 5 == 0) {
+                } else if (step % 1 == 0) {
                     System.out.println("Temperatura:");
                     MatrixService.printVector(T_current);
                 }
