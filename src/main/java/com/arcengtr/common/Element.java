@@ -17,8 +17,4 @@ public class Element {
     private double[][] Hbc;
     private double[] P;
     private double[][] C;
-
-    public int getNumNodes() {
-        return nodeId.length;
-    }
 }

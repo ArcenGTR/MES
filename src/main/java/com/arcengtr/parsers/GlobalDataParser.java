@@ -33,6 +33,10 @@ public class GlobalDataParser {
                 .toList();
 
         GlobalData.GlobalDataBuilder globalDataBuilder = GlobalData.builder();
+        globalDataBuilder.latentHeat(0.0);
+        globalDataBuilder.meltingTemp(Double.MAX_VALUE);
+        globalDataBuilder.meltingRange(1.0);
+
         List<Node> nodes = new ArrayList<>();
         List<Element> elements = new ArrayList<>();
         List<Integer> bcNodes = new ArrayList<>();
@@ -51,6 +55,11 @@ public class GlobalDataParser {
             else if (line.startsWith("InitialTemp")) globalDataBuilder.initialTemp(readValue(line));
             else if (line.startsWith("Density")) globalDataBuilder.density(readValue(line));
             else if (line.startsWith("SpecificHeat")) globalDataBuilder.specificHeat(readValue(line));
+
+            else if (line.startsWith("LatentHeat")) globalDataBuilder.latentHeat(readValue(line));
+            else if (line.startsWith("MeltingTemp")) globalDataBuilder.meltingTemp(readValue(line));
+            else if (line.startsWith("MeltingRange")) globalDataBuilder.meltingRange(readValue(line));
+
             else if (line.startsWith("Nodes number")) {
                 nN = (int) readValue(line);
                 globalDataBuilder.nN(nN);
@@ -66,15 +75,10 @@ public class GlobalDataParser {
                     if (parts.length >= 3) {
                         double x = Double.parseDouble(parts[1].trim());
                         double y = Double.parseDouble(parts[2].trim());
-                        nodes.add(Node.builder()
-                                .x(x)
-                                .y(y)
-                                .boundary(false)
-                                .build());
+                        nodes.add(Node.builder().x(x).y(y).boundary(false).build());
                     }
                 }
             }
-
             else if (line.startsWith("*Element")) {
                 for (int j = 0; j < nE; j++) {
                     i++;
@@ -97,27 +101,17 @@ public class GlobalDataParser {
                 for (String part : bcParts) {
                     int nodeId = Integer.parseInt(part.trim());
                     bcNodes.add(nodeId);
-
                     if (nodeId >= 1 && nodeId <= nodes.size()) {
-                        Node node = nodes.get(nodeId - 1);
-                        node.setBoundary(true);
+                        nodes.get(nodeId - 1).setBoundary(true);
                     }
                 }
             }
         }
 
-        GlobalData globalData = globalDataBuilder
-                .bcNodes(bcNodes)
-                .build();
-        Grid grid = Grid.builder()
-                .nN(nN)
-                .nE(nE)
-                .nodes(nodes)
-                .elements(elements)
-                .build();
+        GlobalData globalData = globalDataBuilder.bcNodes(bcNodes).build();
+        Grid grid = Grid.builder().nN(nN).nE(nE).nodes(nodes).elements(elements).build();
 
         return new ParsedData(globalData, grid);
-
     }
 
     private double readValue(String line) {

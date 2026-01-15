@@ -5,15 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="610968b4-0817-4522-bb75-5c5d4d8df44d" name="Changes" comment="Conductivity and simulation in time(50/50)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/ChartWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/MeshViewer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/globalData/venus.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/BoundaryConditionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/BoundaryConditionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/common/GlobalData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/parsers/GlobalDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/parsers/GlobalDataParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/CapacityMatrixService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/CapacityMatrixService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ConductivityMatrixService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ConductivityMatrixService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ElementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/ElementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/JacobianService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/JacobianService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/MatrixService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arcengtr/services/MatrixService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/Element.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData$GlobalDataBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData$GlobalDataBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/common/GlobalData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arcengtr/parsers/GlobalDataParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arcengtr/parsers/GlobalDataParser.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,31 +65,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "Maven.MESProject [clean].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Code/Java/PAOiM3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/Code/Java/MES/MESProject/src/main/java/com/arcengtr/Main.java",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MESProject [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/Java/PAOiM3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Code/Java/MES/MESProject/src/main/java/com/arcengtr/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code\Java\MES\MESProject\src\main\resources\globalData" />
@@ -233,7 +240,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
